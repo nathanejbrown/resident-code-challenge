@@ -6,6 +6,10 @@ control.addEventListener('change', function(event) {
 function onChange(event) {
   var data;
   var file = event.target.files[0];
+  if (file.type != 'application/json') {
+    alert('Think you can defeat me with outliers Wesley?!');
+    return;
+  }
   var reader = new FileReader();
   reader.onload = function(event) {
     data = event.target.result;
