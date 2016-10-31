@@ -1,7 +1,6 @@
-var control = document.getElementById('inputFile');
-control.addEventListener('change', function(event) {
+$('#inputFile').on('change', function(event) {
   onChange(event);
-}, false);
+});
 
 function onChange(event) {
   var data;
